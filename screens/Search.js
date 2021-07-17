@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
 
-const CartScreen = ({ navigation }) => {
+const SearchScreen = ({ navigation }) => {
     return (
         <View style={ styles.mainContainer }>
             <Text>Cart</Text>
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CartScreen;
+export default SearchScreen;
