@@ -12,8 +12,12 @@ Built with focus on light weighted and easily scalable app along with ease to us
 
 #
 ### Setup
+Go to root of project and install node dependencies
+```cmd
+$ npm install
+```
 Start metro server
-```sh
+```cmd
 $ npm start
 ```
 
@@ -21,11 +25,11 @@ Hit new console & \
 deploy app to test on emulator
 for Android :
 
-```sh
+```cmd
 $ npx react-native run-android
 ```
 for iOS :
 
-```sh
+```cmd
 $ npx react-native run-ios
 ```
