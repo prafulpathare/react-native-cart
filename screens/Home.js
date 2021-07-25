@@ -36,35 +36,25 @@ function shuffleArray(array) {
     return array;
 }
 
-
 const Header = ({ children, title }): Node => {
     const searchPlaceholder = "Search...";
 
     return (
         <View style={{
-            position: 'relative',
             margin: 10,
-            borderRadius: 10,  backgroundColor: '#ddd'
+
         }}>
-            <Image source={require('../assets/icons/search.png')} style={{
-                position: 'absolute',
-                width: 22, height: 22,
-                top: 13, left: 20,
-                zIndex: 4444, tintColor: '#555'
+            <Image source={require('../assets/icons/wallmart-logo.png')} style={{
+                width: 180, height: 30, marginTop: 5,
+                zIndex: 4444, tintColor: '#3b5998'
             }} />
 
-            <TextInput
-                style={{
-                    paddingLeft: 60
-                }}
-                placeholder={searchPlaceholder}
-                underlineColorAndroid="transparent"
-            />
+
         </View>
-
-
     );
 };
+
+
 const App: () => Node = () => {
     const [isLoading, setLoading] = useState(true);
     const isDarkMode = useColorScheme() === 'dark';
@@ -104,7 +94,7 @@ const App: () => Node = () => {
                             marginTop: 10,
                         }} >
                             <Text style={{
-                                color:'#777',
+                                color: '#777',
                                 fontSize: 11,
                                 lineHeight: 20
                             }}>{item.publishedAt}</Text>

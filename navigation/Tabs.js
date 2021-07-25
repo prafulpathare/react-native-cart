@@ -9,6 +9,7 @@ import SearchScreen from '../screens/Search';
 
 const Tab = createBottomTabNavigator();
 
+
 const Tabs = () => {
     return (
         <Tab.Navigator
@@ -16,14 +17,16 @@ const Tabs = () => {
                 showLabel: false,
                 style: {
                     position: 'absolute',
-                    bottom: 20,
-                    left: 20,
-                    right: 20,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
                     elevation: 0,
-                    backgroundColor: '#ffffff',
-                    borderRadius: 15,
+                    backgroundColor: "#ffffffff",
+                    borderTopEndRadius: 15,
+                    borderTopStartRadius: 15,
                     height: 55,
-                    ...styles.shadow
+                    borderTopColor: 'transparent'
+                    // ...styles.shadow
                 }
             }}
         >
@@ -35,10 +38,9 @@ const Tabs = () => {
                                 source={require('../assets/icons/home.png')}
                                 resizeMode='contain'
                                 style={{
-
-                                    width: focused ? 27 : 22,
-                                    height: focused ? 27 : 22,
-                                    tintColor: focused ? '#e32f45' : '#748c94'
+                                    width: focused ? 24 : 21,
+                                    height: focused ? 24 : 21,
+                                    tintColor: focused ? '#2981e6' : '#748c94'
                                 }}
                             />
                         </View>
@@ -46,17 +48,18 @@ const Tabs = () => {
                 }}
             />
             <Tab.Screen name="Search" component={SearchScreen}
+                
                 options={{
+                    tabBarVisible: false,                
                     tabBarIcon: ({ focused }) => (
                         <View style={{ alignItems: 'center', justifyContent: 'center', top: 0 }} >
                             <Image
                                 source={require('../assets/icons/search.png')}
                                 resizeMode='contain'
                                 style={{
-
-                                    width: focused ? 27 : 22,
-                                    height: focused ? 27 : 22,
-                                    tintColor: focused ? '#e32f45' : '#748c94'
+                                    width: focused ? 24 : 21,
+                                    height: focused ? 24 : 21,
+                                    tintColor: focused ? '#2981e6' : '#748c94'
                                 }}
                             />
                         </View>
@@ -71,9 +74,9 @@ const Tabs = () => {
                             resizeMode='contain'
                             style={{
 
-                                width: focused ? 27 : 22,
-                                height: focused ? 27 : 22,
-                                tintColor: focused ? '#e32f45' : '#748c94'
+                                width: focused ? 24 : 21,
+                                height: focused ? 24 : 21,
+                                tintColor: focused ? '#2981e6' : '#748c94'
                             }}
                         />
                     </View>
@@ -87,9 +90,9 @@ const Tabs = () => {
                             source={require('../assets/icons/user.png')}
                             resizeMode='contain'
                             style={{
-                                width: focused ? 27 : 22,
-                                height: focused ? 27 : 22,
-                                tintColor: focused ? '#e32f45' : '#748c94'
+                                width: focused ? 24 : 21,
+                                height: focused ? 24 : 21,
+                                tintColor: focused ? '#2981e6' : '#748c94'
                             }}
                         />
                     </View>
